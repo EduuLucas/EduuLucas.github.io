@@ -1,4 +1,6 @@
 let userConfig = undefined
+const isProd = process.env.NODE_ENV === 'production';
+
 try {
   // try to import ESM first
   userConfig = await import('./v0-user-next.config.mjs')
@@ -27,6 +29,9 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  reactStrictMode: true,
+  assetPrefix: isProd ? '/your-repository-name/' : '',
+  basePath: isProd ? '/your-repository-name' : '',
 }
 
 if (userConfig) {
