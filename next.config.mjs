@@ -30,8 +30,8 @@ const nextConfig = {
     parallelServerCompiles: true,
   },
   reactStrictMode: true,
-  assetPrefix: isProd ? '/your-repository-name/' : '',
-  basePath: isProd ? '/your-repository-name' : '',
+  assetPrefix: isProd ? '/portfolio/' : '',
+  basePath: isProd ? '/portfolio' : '',
 }
 
 if (userConfig) {
