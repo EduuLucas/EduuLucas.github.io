@@ -5,7 +5,6 @@ import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
-import { submitContactForm } from "../actions"
 
 export default function ContactForm() {
   const [pending, setPending] = useState(false)
@@ -14,8 +13,7 @@ export default function ContactForm() {
   async function handleSubmit(formData: FormData) {
     setPending(true)
     try {
-      const response = await submitContactForm(formData)
-      setMessage(response.message)
+      console.log(formData)
     } catch (error) {
       setMessage("Something went wrong. Please try again.")
     } finally {

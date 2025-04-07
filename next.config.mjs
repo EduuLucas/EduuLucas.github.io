@@ -32,6 +32,7 @@ const nextConfig = {
   reactStrictMode: true,
   assetPrefix: isProd ? '/portfolio/' : '',
   basePath: isProd ? '/portfolio' : '',
+  output: "export"
 }
 
 if (userConfig) {
