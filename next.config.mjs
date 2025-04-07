@@ -32,6 +32,7 @@ const nextConfig = {
   reactStrictMode: true,
   assetPrefix: isProd ? '/your-repository-name/' : '',
   basePath: isProd ? '/your-repository-name' : '',
+  output: "export"
 }
 
 if (userConfig) {
